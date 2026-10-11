@@ -1,4 +1,4 @@
-(** FBF_Geometry.v
+(** Coq/FBF_Geometry.v
     Basic geometric structures in FBF
 *)
 
