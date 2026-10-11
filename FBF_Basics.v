@@ -1,4 +1,4 @@
-(** FBF_Basics.v
+(** Coq/FBF_Basics.v
     Basic definitions and axioms for Finite Bit Formalism (FBF)
 *)
 
