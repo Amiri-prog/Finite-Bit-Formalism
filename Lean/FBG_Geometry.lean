@@ -97,3 +97,19 @@ def geomToBit (g : GeomBit) : Bit :=
 #check triangleFObject
 #check GeomBit
 #check geomToBit
+-- ============================================
+-- PART 8: TRIANGLE BIT SETS
+-- ============================================
+
+def base_bits (_ : Triangle) : InformationSet :=
+  { geomToBit { kind := GeomBitType.side, label := 0 } }
+
+def adjoined_bits (_ : Triangle) : InformationSet :=
+  { geomToBit { kind := GeomBitType.side, label := 1 },
+    geomToBit { kind := GeomBitType.side, label := 2 },
+    geomToBit { kind := GeomBitType.sideness, label := 0 } }
+
+def equivalent_bits (_ : Triangle) : InformationSet :=
+  { geomToBit { kind := GeomBitType.angle, label := 1 },
+    geomToBit { kind := GeomBitType.angle, label := 2 },
+    geomToBit { kind := GeomBitType.sideness, label := 0 } }
