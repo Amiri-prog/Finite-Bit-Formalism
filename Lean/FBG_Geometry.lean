@@ -113,3 +113,29 @@ def equivalent_bits (_ : Triangle) : InformationSet :=
   { geomToBit { kind := GeomBitType.angle, label := 1 },
     geomToBit { kind := GeomBitType.angle, label := 2 },
     geomToBit { kind := GeomBitType.sideness, label := 0 } }
+-- ============================================
+-- PART 10: EMERGENCE FROM FBF AXIOM 3
+-- ============================================
+
+theorem triangle_emergence_from_axiom3
+    [InformationStructure]
+    [BitDependency]
+    [InformationEquivalence]
+    [FBF_Axiom3]
+    (t : Triangle)
+    (hmin :
+      MinimalBits (base_bits t) (triangleFObject t))
+    (hadj :
+      AdjoinedBits (base_bits t) (adjoined_bits t)) :
+    ∃! E : InformationSet,
+      E ≠ base_bits t ∧
+      EquivalentSet
+        (triangleFObject t)
+        (AdjoinSet (base_bits t) (adjoined_bits t))
+        E :=
+  FBF_Axiom3.emergence
+    (triangleFObject t)
+    (base_bits t)
+    (adjoined_bits t)
+    hmin
+    hadj
