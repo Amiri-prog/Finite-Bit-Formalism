@@ -135,6 +135,17 @@ def TriangleEquivalentBitsBridge
     (base_bits t)
     (adjoined_bits t)
     (equivalent_bits t)
+theorem triangle_concrete_equivalent_bits
+    [InformationStructure]
+    [BitDependency]
+    [InformationEquivalence]
+    (t : Triangle)
+    (hbridge : TriangleEquivalentBitsBridge t) :
+    EquivalentSet
+      (triangleFObject t)
+      (AdjoinSet (base_bits t) (adjoined_bits t))
+      (AdjoinSet (base_bits t) (equivalent_bits t)) := by
+  exact hbridge.1
 -- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
