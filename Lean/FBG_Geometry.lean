@@ -237,6 +237,22 @@ theorem triangle_equivalent_bits_independent
     IndependentSet (equivalent_bits t) := by
   exact TriangleEquivalentBitIndependence.independent
 -- ============================================
+-- TRIANGLE EQUIVALENT-BIT MINIMALITY
+-- ============================================
+
+class TriangleEquivalentBitMinimality
+    [InformationEquivalence]
+    (t : Triangle) : Prop where
+
+  minimal :
+    ∀ E' : InformationSet,
+      E' ⊆ equivalent_bits t →
+      E' ≠ equivalent_bits t →
+      ¬ EquivalentSet
+        (triangleFObject t)
+        (AdjoinSet (base_bits t) (adjoined_bits t))
+        (AdjoinSet (base_bits t) E')
+-- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
 
