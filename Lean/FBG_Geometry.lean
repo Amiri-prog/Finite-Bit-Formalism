@@ -146,6 +146,31 @@ theorem triangle_concrete_equivalent_bits
       (AdjoinSet (base_bits t) (adjoined_bits t))
       (AdjoinSet (base_bits t) (equivalent_bits t)) := by
   exact hbridge.1
+theorem triangle_equivalent_bits_bridge_of
+    [InformationEquivalence]
+    [BitDependency]
+    (t : Triangle)
+
+    (heq :
+      EquivalentSet
+        (triangleFObject t)
+        (AdjoinSet (base_bits t) (adjoined_bits t))
+        (AdjoinSet (base_bits t) (equivalent_bits t)))
+
+    (hind :
+      IndependentSet (equivalent_bits t))
+
+    (hmin :
+      ∀ E' : InformationSet,
+        E' ⊆ equivalent_bits t →
+        E' ≠ equivalent_bits t →
+        ¬ EquivalentSet
+          (triangleFObject t)
+          (AdjoinSet (base_bits t) (adjoined_bits t))
+          (AdjoinSet (base_bits t) E')) :
+
+    TriangleEquivalentBitsBridge t := by
+  exact ⟨heq, hind, hmin⟩
 -- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
