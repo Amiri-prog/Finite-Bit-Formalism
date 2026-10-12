@@ -123,6 +123,19 @@ theorem triangle_explicit_bit_balance
     BitContent (equivalent_bits t) := by
   native_decide
 -- ============================================
+-- TRIANGLE: CONCRETE EQUIVALENT-BIT BRIDGE
+-- ============================================
+
+def TriangleEquivalentBitsBridge
+    [InformationEquivalence]
+    [BitDependency]
+    (t : Triangle) : Prop :=
+  MinimalEquivalentBits
+    (triangleFObject t)
+    (base_bits t)
+    (adjoined_bits t)
+    (equivalent_bits t)
+-- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
 
