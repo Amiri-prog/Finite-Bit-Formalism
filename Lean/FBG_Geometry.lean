@@ -114,6 +114,15 @@ def equivalent_bits (_ : Triangle) : InformationSet :=
     geomToBit { kind := GeomBitType.angle, label := 2 },
     geomToBit { kind := GeomBitType.sideness, label := 0 } }
 -- ============================================
+-- PART 9: TRIANGLE EXPLICIT BIT BALANCE
+-- ============================================
+
+theorem triangle_explicit_bit_balance
+    (t : Triangle) :
+    BitContent (adjoined_bits t) =
+    BitContent (equivalent_bits t) := by
+  native_decide
+-- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
 
