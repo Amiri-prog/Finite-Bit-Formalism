@@ -219,6 +219,24 @@ theorem triangle_side_angle_equivalent
     (TriangleBitSemantics.side_data_realizes (t := t))
     (TriangleBitSemantics.equivalent_data_realizes (t := t))
 -- ============================================
+-- TRIANGLE EQUIVALENT-BIT INDEPENDENCE
+-- ============================================
+
+class TriangleEquivalentBitIndependence
+    [BitDependency]
+    (t : Triangle) : Prop where
+
+  independent :
+    IndependentSet (equivalent_bits t)
+
+
+theorem triangle_equivalent_bits_independent
+    [BitDependency]
+    (t : Triangle)
+    [TriangleEquivalentBitIndependence t] :
+    IndependentSet (equivalent_bits t) := by
+  exact TriangleEquivalentBitIndependence.independent
+-- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
 
