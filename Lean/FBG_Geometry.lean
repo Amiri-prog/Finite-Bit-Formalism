@@ -253,6 +253,30 @@ class TriangleEquivalentBitMinimality
         (AdjoinSet (base_bits t) (adjoined_bits t))
         (AdjoinSet (base_bits t) E')
 -- ============================================
+-- TRIANGLE EQUIVALENT-BIT BRIDGE DERIVATION
+-- ============================================
+
+theorem triangle_equivalent_bits_bridge
+    [InformationStructure]
+    [BitDependency]
+    [InformationEquivalence]
+    (ax1 : FBF_Axiom1_Refined)
+    (t : Triangle)
+    [TriangleBitSemantics t]
+    [TriangleEquivalentBitIndependence t]
+    [TriangleEquivalentBitMinimality t] :
+    TriangleEquivalentBitsBridge t := by
+
+  apply triangle_equivalent_bits_bridge_of t
+
+  · exact triangle_side_angle_equivalent ax1 t
+
+  · exact TriangleEquivalentBitIndependence.independent
+      (t := t)
+
+  · exact TriangleEquivalentBitMinimality.minimal
+      (t := t)
+-- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
 
