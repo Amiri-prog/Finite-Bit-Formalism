@@ -172,6 +172,27 @@ theorem triangle_equivalent_bits_bridge_of
     TriangleEquivalentBitsBridge t := by
   exact ⟨heq, hind, hmin⟩
 -- ============================================
+-- TRIANGLE BIT SEMANTICS
+-- ============================================
+
+class TriangleBitSemantics
+    [InformationStructure]
+    (t : Triangle) where
+
+  side_data_realizes :
+    InformationStructure.Realizes
+      (triangleFObject t)
+      (AdjoinSet
+        (base_bits t)
+        (adjoined_bits t))
+
+  equivalent_data_realizes :
+    InformationStructure.Realizes
+      (triangleFObject t)
+      (AdjoinSet
+        (base_bits t)
+        (equivalent_bits t))
+-- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
 
