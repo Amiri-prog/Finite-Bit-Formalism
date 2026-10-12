@@ -192,6 +192,32 @@ class TriangleBitSemantics
       (AdjoinSet
         (base_bits t)
         (equivalent_bits t))
+theorem triangle_side_angle_equivalent
+    [InformationStructure]
+    [BitDependency]
+    [InformationEquivalence]
+    (ax1 : FBF_Axiom1_Refined)
+    (t : Triangle)
+    [TriangleBitSemantics t] :
+    EquivalentSet
+      (triangleFObject t)
+      (AdjoinSet
+        (base_bits t)
+        (adjoined_bits t))
+      (AdjoinSet
+        (base_bits t)
+        (equivalent_bits t)) := by
+
+  exact ax1.realizations_equivalent
+    (triangleFObject t)
+    (AdjoinSet
+      (base_bits t)
+      (adjoined_bits t))
+    (AdjoinSet
+      (base_bits t)
+      (equivalent_bits t))
+    (TriangleBitSemantics.side_data_realizes (t := t))
+    (TriangleBitSemantics.equivalent_data_realizes (t := t))
 -- ============================================
 -- PART 10: EMERGENCE FROM FBF AXIOM 3
 -- ============================================
