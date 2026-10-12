@@ -139,3 +139,29 @@ theorem triangle_emergence_from_axiom3
     (adjoined_bits t)
     hmin
     hadj
+-- ============================================
+-- PART 10: TRIANGLE EMERGENCE FROM REFINED AXIOM 3
+-- ============================================
+
+theorem triangle_emergence_from_axiom3
+    [InformationStructure]
+    [BitDependency]
+    [InformationEquivalence]
+    [FBF_Axiom3_Refined]
+    (t : Triangle)
+    (hdet :
+      DeterminingAdjoinedBits
+        (base_bits t)
+        (adjoined_bits t)
+        (triangleFObject t)) :
+    ∃ E : InformationSet,
+      MinimalEquivalentBits
+        (triangleFObject t)
+        (base_bits t)
+        (adjoined_bits t)
+        E :=
+  FBF_Axiom3_Refined.emergence
+    (triangleFObject t)
+    (base_bits t)
+    (adjoined_bits t)
+    hdet
