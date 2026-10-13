@@ -8,8 +8,8 @@ Finite Bit Formalism (FBF) is an axiomatic, information-based framework
 for mathematical reasoning. Its geometric realization is called
 **Finite Bit Geometry (FBG)**.
 
-The central idea is that a mathematical entity may be represented by a
-finite minimal set of information bits. Mathematical constructions may
+The central idea is that a mathematical entity can be represented by a
+finite minimal set of information bits. Mathematical constructions 
 produce equivalent representations without introducing new independent
 information.
 
