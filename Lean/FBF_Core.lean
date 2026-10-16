@@ -4,6 +4,9 @@ import Mathlib.Data.Set.Basic
 import Mathlib.Basic.Real.Basic
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
 import Mathlib.Tactic
+import Mathlib.Algebra.Group.Action.Basic
+import Mathlib.GroupTheory.Solvable
+import Mathlib.Logic.Relation
 
 
 -- ============================================
