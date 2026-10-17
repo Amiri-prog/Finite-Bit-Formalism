@@ -9,6 +9,7 @@ rev = "v4.35.0"
 
 [[lean_lib]]
 name = "FBF"
+srcDir = "Lean"
 roots = [
   "FBF_Core",
   "FBF_Symmetry",
