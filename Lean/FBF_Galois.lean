@@ -6384,5 +6384,6 @@ end FBF_Galois
 -- BASIC CHECKS
 -- ============================================
 
-#print axioms FBF_Galois.FBF_block_threshold_four_iff
-#print axioms FBF_Galois.PolynomialFBF_block_threshold_four_transfers
+#print axioms FBF_Galois.FBF_actual_block_threshold_four_iff
+#print axioms FBF_Galois.PolynomialFBF_final_block_threshold_four_iff
+#print axioms FBF_Galois.PolynomialFBF_final_large_block_obstruction
