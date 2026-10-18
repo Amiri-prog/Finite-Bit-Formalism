@@ -1,8 +1,13 @@
-```markdown
+
 # Finite Bit Formalism (FBF)
 
-**Author:** Manouchehr Amiri  
-**Affiliation:** Independent Researcher
+Author: Manouchehr Amiri  
+Affiliation: Independent Researcher
+
+[![DOI](https://zenodo.org/badge/990585452.svg)](https://doi.org/10.5281/zenodo.23448233)
+**Archived release:** v1.0.1  
+**Version DOI:** https://doi.org/10.5281/zenodo.23448233 
+Introduction
 
 Finite Bit Formalism (FBF) is an axiomatic, information-based framework
 for mathematical reasoning. Its geometric realization is called
