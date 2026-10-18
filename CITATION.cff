@@ -1,1 +1,12 @@
-
+cff-version: 1.2.0
+message: "If you use this formalization, please cite it."
+title: "Finite Bit Formalism: Lean Formalization"
+type: software
+authors:
+  - family-names: "Amiri"
+    given-names: "Manouchehr"
+    affiliation: "Independent Researcher"
+version: "1.0.1"
+date-released: "2026-10-18"
+repository-code: "https://github.com/Amiri-prog/Finite-Bit-Formalism"
+doi: https://doi.org/10.5281/zenodo.23448234
